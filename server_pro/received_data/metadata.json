@@ -347,6 +347,35 @@
                 }
             },
             "path": "received_data/images/image_12.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.2626,
+                    "fy": 507.0704
+                },
+                "principalPoint": {
+                    "cx": 320.4398,
+                    "cy": 243.1586
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.950298,
+                    "y": 0.4875515,
+                    "z": -0.3252091
+                },
+                "rotation": {
+                    "x": 0.07663842,
+                    "y": 0.8651416,
+                    "z": -0.07184466,
+                    "w": 0.490403
+                }
+            },
+            "path": "received_data/images/image_10.jpg"
         }
     ]
 }

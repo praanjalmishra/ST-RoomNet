@@ -85,7 +85,7 @@ def process_image_with_depth_and_extrinsics(image_path, edge_points, encoder='vi
     Infers depth for an image, unprojects 2D edge points into 3D points, and transforms them to the world frame.
     :param image_path: Path to the input image.
     :param edge_points: List of 2D edge points [(u1, v1), (u2, v2), ...].
-    :param encoder: Depth model encoder ('vits', 'vitb', 'vitl', 'vitg').
+    :param encoder: Depth model encoder
     :param input_size: Input size for the depth model.
     :param extrinsics: Dictionary with 'rotation' (matrix or quaternion) and 'translation' vector.
     :return: List of 3D points in the world frame.
