@@ -50,7 +50,7 @@ class DataHandler(FileSystemEventHandler):
 
     def process_metadata(self):
         """
-        Reads metadata.json, processes new images, and saves the results.
+        Reads metadata.json, processes new images, and writes each result sequentially.
         """
         try:
             with open(self.metadata_path, "r") as file:
@@ -64,15 +64,43 @@ class DataHandler(FileSystemEventHandler):
 
                 print(f"Processing {image_path}...")
                 try:
+                    # Process the image entry
                     result = self.process_image_entry(entry, image_path)
+                    print(f"Result: {result}")
                     self.processed_results.append(result)
+
+                    # Save the result immediately to the JSON file
+                    self.append_result_to_json(result, self.processed_data_path)
                 except Exception as e:
                     print(f"Error processing {image_path}: {e}")
-
-            # Save all processed results
-            self.save_results(self.processed_results, self.processed_data_path)
         except Exception as e:
             print(f"Error reading or processing metadata: {e}")
+
+
+    def append_result_to_json(self, result, output_path):
+        """
+        Append a single result to the JSON file.
+        :param result: Processed result to append.
+        :param output_path: Path to the JSON file.
+        """
+        try:
+            # Load existing data or initialize a new list
+            if os.path.exists(output_path):
+                with open(output_path, "r") as file:
+                    data = json.load(file)
+            else:
+                data = []
+
+            # Append the new result
+            data.append(result)
+
+            # Write updated data back to the file
+            with open(output_path, "w") as file:
+                json.dump(data, file, indent=4)
+            print(f"Appended result to {output_path}.")
+        except Exception as e:
+            print(f"Error appending result to {output_path}: {e}")
+
 
     def process_image_entry(self, entry, image_path):
         """
@@ -217,8 +245,13 @@ class DataHandler(FileSystemEventHandler):
         :param results: List of processed results.
         :param output_path: Path to the output JSON file.
         """
+         # Debugging print statements
+        print(f"Debug: Saving results to {output_path}")
+        print(f"Debug: Results data: {results}")
+
         with open(output_path, "w") as file:
             json.dump(results, file, indent=4)
+            print("Debug: JSON file successfully written.")
 
 
 def main():
