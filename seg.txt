@@ -1,0 +1,7 @@
+region_colors = [
+    [255, 255, 255],  # Ceiling
+    [204, 204, 204],  # Floor
+    [153, 153, 153],  # Right Wall
+    [102, 102, 102],  # Left Wall
+   [51, 51, 51]   # Front Wall
+]

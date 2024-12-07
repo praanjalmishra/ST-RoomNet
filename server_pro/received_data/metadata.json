@@ -1,0 +1,352 @@
+{
+    "images": [
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.0723,
+                    "fy": 506.8864
+                },
+                "principalPoint": {
+                    "cx": 320.4398,
+                    "cy": 243.1586
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.898672,
+                    "y": 0.5042492,
+                    "z": -0.3682432
+                },
+                "rotation": {
+                    "x": 0.006257671,
+                    "y": -0.540743,
+                    "z": 0.008670749,
+                    "w": 0.8411199
+                }
+            },
+            "path": "received_data/images/image_1.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.0567,
+                    "fy": 506.8602
+                },
+                "principalPoint": {
+                    "cx": 320.4212,
+                    "cy": 243.1333
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.792106,
+                    "y": 0.4653333,
+                    "z": -0.3504048
+                },
+                "rotation": {
+                    "x": 0.1462558,
+                    "y": -0.5378945,
+                    "z": 0.1167429,
+                    "w": 0.8219793
+                }
+            },
+            "path": "received_data/images/image_2.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.1041,
+                    "fy": 506.906
+                },
+                "principalPoint": {
+                    "cx": 320.4212,
+                    "cy": 243.1333
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.840919,
+                    "y": 0.5573,
+                    "z": -0.426001
+                },
+                "rotation": {
+                    "x": 0.08175636,
+                    "y": 0.8609232,
+                    "z": 0.1572961,
+                    "w": -0.4768492
+                }
+            },
+            "path": "received_data/images/image_3.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.4841,
+                    "fy": 507.3402
+                },
+                "principalPoint": {
+                    "cx": 320.5326,
+                    "cy": 243.2852
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.849331,
+                    "y": 0.5570913,
+                    "z": -0.43213
+                },
+                "rotation": {
+                    "x": 0.08097693,
+                    "y": 0.8611762,
+                    "z": 0.1482432,
+                    "w": -0.4794187
+                }
+            },
+            "path": "received_data/images/image_4.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.1041,
+                    "fy": 506.906
+                },
+                "principalPoint": {
+                    "cx": 320.4212,
+                    "cy": 243.1333
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.775916,
+                    "y": 0.4773999,
+                    "z": -0.4888932
+                },
+                "rotation": {
+                    "x": -0.05422182,
+                    "y": 0.8674024,
+                    "z": -0.1393094,
+                    "w": -0.4746219
+                }
+            },
+            "path": "received_data/images/image_5.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.7374,
+                    "fy": 507.6296
+                },
+                "principalPoint": {
+                    "cx": 320.6068,
+                    "cy": 243.3864
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.767761,
+                    "y": 0.4775215,
+                    "z": -0.4917395
+                },
+                "rotation": {
+                    "x": -0.05565776,
+                    "y": 0.8676642,
+                    "z": -0.1396352,
+                    "w": -0.4738809
+                }
+            },
+            "path": "received_data/images/image_6.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.1516,
+                    "fy": 506.9519
+                },
+                "principalPoint": {
+                    "cx": 320.4212,
+                    "cy": 243.1333
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.863543,
+                    "y": 0.5468062,
+                    "z": -0.2330408
+                },
+                "rotation": {
+                    "x": -0.1091283,
+                    "y": 0.4866775,
+                    "z": 0.08505463,
+                    "w": 0.8625554
+                }
+            },
+            "path": "received_data/images/image_7.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.4053,
+                    "fy": 507.242
+                },
+                "principalPoint": {
+                    "cx": 320.4955,
+                    "cy": 243.2345
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.915156,
+                    "y": 0.5508513,
+                    "z": -0.2477247
+                },
+                "rotation": {
+                    "x": -0.1469691,
+                    "y": 0.5137017,
+                    "z": 0.06801669,
+                    "w": 0.8425464
+                }
+            },
+            "path": "received_data/images/image_8.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.1516,
+                    "fy": 506.9519
+                },
+                "principalPoint": {
+                    "cx": 320.4212,
+                    "cy": 243.1333
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.974141,
+                    "y": 0.4704751,
+                    "z": -0.2143617
+                },
+                "rotation": {
+                    "x": 0.1375946,
+                    "y": 0.5474856,
+                    "z": -0.0816993,
+                    "w": 0.8213723
+                }
+            },
+            "path": "received_data/images/image_9.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.215,
+                    "fy": 507.0244
+                },
+                "principalPoint": {
+                    "cx": 320.4398,
+                    "cy": 243.1586
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.999153,
+                    "y": 0.4687516,
+                    "z": -0.2194653
+                },
+                "rotation": {
+                    "x": 0.1430241,
+                    "y": 0.549816,
+                    "z": -0.08345182,
+                    "w": 0.8187078
+                }
+            },
+            "path": "received_data/images/image_10.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.3262,
+                    "fy": 507.1431
+                },
+                "principalPoint": {
+                    "cx": 320.4583,
+                    "cy": 243.1839
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.992617,
+                    "y": 0.4818375,
+                    "z": -0.335176
+                },
+                "rotation": {
+                    "x": 0.08705715,
+                    "y": 0.8510304,
+                    "z": -0.08685685,
+                    "w": 0.5105136
+                }
+            },
+            "path": "received_data/images/image_11.jpg"
+        },
+        {
+            "intrinsics": {
+                "width": 640,
+                "height": 480,
+                "fov": 74.32295,
+                "focalLength": {
+                    "fx": 507.2626,
+                    "fy": 507.0704
+                },
+                "principalPoint": {
+                    "cx": 320.4398,
+                    "cy": 243.1586
+                }
+            },
+            "extrinsics": {
+                "position": {
+                    "x": 1.950298,
+                    "y": 0.4875515,
+                    "z": -0.3252091
+                },
+                "rotation": {
+                    "x": 0.07663842,
+                    "y": 0.8651416,
+                    "z": -0.07184466,
+                    "w": 0.490403
+                }
+            },
+            "path": "received_data/images/image_12.jpg"
+        }
+    ]
+}

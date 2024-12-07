@@ -1,0 +1,7 @@
+first read and parse the data from received_data/images and received_data/metadata.csv
+
+then perform inference_st.py to get endpoints = roomnet_process_image(IMAGE_PATH)
+
+then perform the depth inference and unproject 2d points to 3d coordinate in the world frame using metadata
+
+then write in json in processed_data

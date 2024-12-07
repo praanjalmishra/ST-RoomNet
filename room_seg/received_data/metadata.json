@@ -1,0 +1,63 @@
+{
+    "images": [
+      {
+        "path": "/path/to/image_1.jpg",
+        "intrinsics": {
+          "width": 640,
+          "height": 480,
+          "fov": 74.32295,
+          "focalLength": {
+            "fx": 506.91,
+            "fy": 506.72
+          },
+          "principalPoint": {
+            "cx": 320.42,
+            "cy": 243.13
+          }
+        },
+        "extrinsics": {
+          "position": {
+            "x": 3.27,
+            "y": 0.46,
+            "z": -0.73
+          },
+          "rotation": {
+            "x": 0.00400,
+            "y": -0.68306,
+            "z": -0.00134,
+            "w": 0.73035
+          }
+        }
+      },
+      {
+        "path": "/path/to/image_2.jpg",
+        "intrinsics": {
+          "width": 1280,
+          "height": 720,
+          "fov": 90.0,
+          "focalLength": {
+            "fx": 800.0,
+            "fy": 800.0
+          },
+          "principalPoint": {
+            "cx": 640.0,
+            "cy": 360.0
+          }
+        },
+        "extrinsics": {
+          "position": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "rotation": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0,
+            "w": 1.0
+          }
+        }
+      }
+    ]
+  }
+  
