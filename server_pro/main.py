@@ -239,19 +239,19 @@ class DataHandler(FileSystemEventHandler):
         }
 
 
-    def save_results(self, results, output_path):
-        """
-        Save processed results to a JSON file.
-        :param results: List of processed results.
-        :param output_path: Path to the output JSON file.
-        """
-         # Debugging print statements
-        print(f"Debug: Saving results to {output_path}")
-        print(f"Debug: Results data: {results}")
+    # def save_results(self, results, output_path):
+    #     """
+    #     Save processed results to a JSON file.
+    #     :param results: List of processed results.
+    #     :param output_path: Path to the output JSON file.
+    #     """
+    #      # Debugging print statements
+    #     print(f"Debug: Saving results to {output_path}")
+    #     print(f"Debug: Results data: {results}")
 
-        with open(output_path, "w") as file:
-            json.dump(results, file, indent=4)
-            print("Debug: JSON file successfully written.")
+    #     with open(output_path, "w") as file:
+    #         json.dump(results, file, indent=4)
+    #         print("Debug: JSON file successfully written.")
 
 
 def main():
@@ -259,6 +259,11 @@ def main():
     Main function to start the watchdog observer.
     """
     print("Starting observer...")
+
+    # Clear and initialize the processed JSON file
+    with open(PROCESSED_DATA_PATH, "w") as file:
+        json.dump([], file, indent=4)
+    print(f"Initialized {PROCESSED_DATA_PATH} for new run.")
     event_handler = DataHandler(METADATA_PATH, PROCESSED_DATA_PATH)
 
     # Process existing files on startup

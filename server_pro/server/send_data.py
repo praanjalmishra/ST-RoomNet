@@ -5,8 +5,8 @@ import json
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-# Folder containing the JSON file
-JSON_FOLDER = "/home/scai/mr/server_ml/server_pro/processed_data/"
+# Folder containing JSON files
+JSON_FOLDER = "/home/scai/mr/server_ml/server_pro/processed_data"
 os.makedirs(JSON_FOLDER, exist_ok=True)  # Ensure the folder exists
 
 # Global variable to track WebSocket clients
@@ -43,12 +43,44 @@ async def send_json_update(file_path):
     except Exception as e:
         print(f"Failed to send JSON update: {str(e)}")
 
+async def send_existing_json_files(websocket):
+    """Send all existing JSON files in the folder to a connected client."""
+    try:
+        # List all JSON files in the folder
+        json_files = [f for f in os.listdir(JSON_FOLDER) if f.endswith(".json")]
+
+        if not json_files:
+            message = "No JSON files available."
+            print(message)
+            await websocket.send(json.dumps({"status": "error", "message": message}))
+            return
+
+        for json_file in json_files:
+            # Construct the full path
+            file_path = os.path.join(JSON_FOLDER, json_file)
+            
+            # Load the JSON file
+            with open(file_path, "r") as file:
+                data = json.load(file)
+
+            # Send JSON data to the client
+            message = json.dumps({"filename": json_file, "content": data})
+            await websocket.send(message)
+            print(f"Sent existing JSON file: {json_file}")
+    except Exception as e:
+        error_message = f"Failed to send existing JSON files: {str(e)}"
+        print(error_message)
+        await websocket.send(json.dumps({"status": "error", "message": error_message}))
+
 async def handle_connection(websocket, path):
     """Handle incoming WebSocket connections."""
     print("Client connected")
     connected_clients.add(websocket)
     try:
-        # Keep the connection alive
+        # Send existing JSON files to the client
+        await send_existing_json_files(websocket)
+
+        # Keep the connection alive and send real-time updates
         await websocket.wait_closed()
     finally:
         connected_clients.remove(websocket)
@@ -58,7 +90,8 @@ async def main():
     """Main coroutine to start the WebSocket server and monitor JSON files."""
     # Start WebSocket server
     server = await websockets.serve(handle_connection, "0.0.0.0", 8765)
-    print("WebSocket server running on ws://localhost:8765")
+    print(f"WebSocket server running on ws://localhost:8765")
+    print(f"Watching for changes in folder: {JSON_FOLDER}")
 
     # Start watchdog observer
     loop = asyncio.get_event_loop()
@@ -66,7 +99,6 @@ async def main():
     observer = Observer()
     observer.schedule(event_handler, JSON_FOLDER, recursive=False)
     observer.start()
-    print(f"Watching for changes in folder: {JSON_FOLDER}")
 
     try:
         await server.wait_closed()
